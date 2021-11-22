@@ -1,0 +1,13 @@
+[Unit]
+Description=BSC Full Node
+
+[Service]
+User=geth
+Type=simple
+WorkingDirectory=/home/geth
+ExecStart=/bin/bash /home/geth/start.sh
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target
